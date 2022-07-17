@@ -6,20 +6,31 @@ using System.Threading.Tasks;
 
 namespace LineComprison
 {
-    internal class UC1lc
+    public class LineLength
     {
-        public void findvalue()
+        int X1;
+        int Y1;
+        int X2;
+        int Y2;
+        double Length_XY;
+        public void CalculateLength()
         {
-            Console.WriteLine("Enter the value of x1");
-            int x1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of x2");
-            int x2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of y1");
-            int y1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter the value of y2");
-            int y2 = Convert.ToInt32(Console.ReadLine());
-            double result = Math.Sqrt((x2-x1)^2 + (y2-y1)^2);
-            Console.WriteLine(result);
+            Console.WriteLine("Enter X,Y Co_Ordinates of the Point 1: ");
+            Console.Write("Enter Value X1: ");
+            X1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Value Y1: ");
+            Y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter X,Y Co_Ordinates of the Point 2: ");
+            Console.Write("Enter Value X2: ");
+            X2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Value Y2: ");
+            Y2 = Convert.ToInt32(Console.ReadLine());
+            Length_XY = Math.Sqrt(Math.Pow((X2 - X1), 2) + Math.Pow((Y2 - Y1), 2));
+            Console.WriteLine("Length of Value is : " + Length_XY);
+            Console.WriteLine("==================================================================================");
+
+
         }
     }
 }
+
